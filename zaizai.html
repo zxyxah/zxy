@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <title>节日快乐</title>
- <embed src="./img/music.mp3" hidden="true" autostart="true" loop="true"> 
 <style>
 html {
 	background:#000;
@@ -133,7 +132,20 @@ to {
 </style>
 </head>
 <body>
-	
+<audio src="./img/music.mp3" id="Jaudio" class="media-audio" autoplay preload loop="loop"></audio>
+<script type="text/javascript">
+	function audioAutoPlay(id){
+		var audio = document.getElementById(id);
+		audio.play();
+	    document.addEventListener("WeixinJSBridgeReady", function () {
+	            audio.play();
+	    }, false);
+	    document.addEventListener('YixinJSBridgeReady', function() {
+	    	audio.play();
+	    }, false);
+	}
+	audioAutoPlay('Jaudio');
+</script>
 <marquee><span style="font-weight: bolder;font-size: 40px;color: white;">
 814小时，每天早睡消磨没有你的时光</span></marquee>
 <marquee><span style="font-weight: bolder;font-size: 40px;color: white;">
